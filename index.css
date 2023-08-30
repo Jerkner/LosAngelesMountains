@@ -1,0 +1,288 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* HERO */
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/Image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 40%;
+}
+
+.hero-nav {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-nav-links {
+    display: flex;
+    gap: 3em;
+}
+
+.hero-nav-links p {
+    color: white;
+}
+
+.hero-logo {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+
+/* HISTORY */
+
+.history-image {
+    position: relative;
+    height: 100vh;
+    background-image: url(images/Bg.png);
+    background-position-y: 33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.history-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: white;
+}
+
+.history-nav-links {
+    display: flex;
+    gap: 3em;
+}
+
+.history-nav-links p {
+    color: rgba(65, 79, 107);
+}
+
+.history-logo {
+    width: 8em;
+    cursor: pointer;
+}
+
+.history-content {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.history-text {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+.history-title {
+    width: 12vw;
+    margin-top: 2em;
+    transform: translateX(1vw);
+}
+
+.history-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 8em;
+    padding: 1em 0;
+    background-color: rgba(65, 79, 107, 0.85);
+}
+
+.history-items {
+    margin: 0 auto;
+    display: flex;
+    max-width: 800px;
+    margin-bottom: 0.5em;
+}
+
+.items-group2 {
+    display: none;
+}
+
+.history-item {
+    max-width: 110px;
+    margin: 0.2em;
+    cursor: pointer;
+}
+
+.history-ellipses {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.ellipse1,
+.ellipse2,
+.ellipse3 {
+    width: 0.25em;
+    height: 0.25em;
+    background-image: url("images/Ellipse\ 1\ copy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.ellipse-filled {
+    background-image: url("images/Ellipse\ 1.png");
+}
+
+/* CLIMB */
+
+.climb-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    padding: 1.5em;
+    background-color: white;
+    gap: 1.5em;
+}
+
+.climb-logo {
+    max-width: 33%;
+}
+
+.climb-text {
+    max-width: 50%;
+}
+
+.climb-nav {
+    display: flex;
+    min-width: 100vw;
+    padding-left: 20%;
+    background-color: rgba(65, 79, 107);
+}
+
+.climb-nav p {
+    white-space: nowrap;
+    padding: 0.5em 1em;;
+    font-size: 1em;
+    color: #b0b4be;
+}
+
+.climb-nav p:hover {
+    background-color: #b0b4be;
+    color: rgba(65, 79, 107);
+}
+
+.climb-bg {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.climb-schedule {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    width: 20em;
+    max-height: min-content;
+    padding: 1em 1.8em;
+    background-color: rgba(236, 243, 253, 0.6);
+}
+
+.climb-schedule h1 {
+    margin-bottom: 0.5em;
+    font-size: 1.8em;
+    color: rgba(65, 79, 107);
+}
+
+.climb-event {
+    display: flex;
+    justify-content: space-between;
+}
+
+.climb-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(65, 79, 107);
+}
+
+.footer-logo {
+    cursor: pointer;
+    display: flex;
+    padding: 1em;
+}
+
+.footer-img {
+    width: 25%;
+    margin-right: 0.5em;
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #61759E;
+    text-align: end;
+}
+
+.avoid-wrap {
+    display: inline-block;
+    margin-left: 1ch;
+}
+
+/* COMMON PROPERTIES */
+
+.hero-nav-links p,
+.history-nav-links p,
+.climb-nav p {
+    margin: auto 0;
+    font-size: 0.8em;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.hero-nav-links p:hover,
+.history-nav-links p:hover,
+.climb-nav p:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 480px) {
+    .items-group1,
+    .items-group2 {
+        display: flex;
+    }
+
+    .items-group1 {
+        justify-content: flex-end;
+    }
+
+    .history-text {
+        width: 80%;
+    }
+
+    .climb-schedule {
+        left: 20%;
+        top: 35%;
+
+    }
+}
